@@ -6,11 +6,19 @@ Release notes follow the [keep a changelog](https://keepachangelog.com/en/1.1.0/
 
 ## [Unreleased]
 
+### Added
+
+- Automatically set androidVersionCode to `seconds since 2025-01-01T00:00:00` to ensure conflict free builds.
+- We now automatically update the AndroidManifest as necessary for AirConsole to work on Android. We also remove old settings that are no longer necessary or conflict with Unity 2022 or Unity 6.
+
+### Removed
+
+- AndroidManifest: The plugin no longer ships with a custom AndroidManifest.
+- Python SDK handling has been removed. This feature was only required for Unity 2019 on MacOS 12+
 
 ## [2.5.6] - 2025-02-11
 
 This release fixes an issue where the Unity loader is causing requests to non-existing files in Unity 6 web builds.
-
 
 ## [2.5.5] - 2025-01-07
 
@@ -19,7 +27,6 @@ This release patches a bug introduced in version 2.5.4
 ### Fixed
 
 - We fixed the AirConsole settings to use the correct Unity WebGL template with Unity versions before Unity 6 and after Unity 2020.1.
-
 
 ## [2.5.4] - 2024-12-10
 
